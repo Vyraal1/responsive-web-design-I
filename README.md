@@ -22,6 +22,14 @@ Follow these steps for completing your project.
 ## Task 2: Minimum Viable Product
 
 - [ ] Review each [design file](design-files). Notice the subtle differences between them all.
+
+  - Tablet
+    - logo flexes to the top of the header container
+    - Jumbotron image disappears (display:none)
+  - Mobile
+    - navbar and logo all become display column
+    - all the text portions become text column
+
 - [x] Insert a `viewport` meta tag into the head of the project with these html attributes: `content="width=device-width, initial-scale=1"`
 - [ ] Introduce max-width media queries into your project at 800px and 500px
 - [ ] Do your best to make your styles match the design files at each breakpoint
