@@ -253,4 +253,51 @@ button.action {
 
 /* Mobile */
 
-@media (max-width: 500px) {}
+@media (max-width: 500px) {
+  body {
+    padding: 25px 0px;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  nav a {
+    text-align: center;
+    padding: 15px 0px;
+    border-bottom: 1px black solid;
+  }
+  /* is this the correct way to do this? */
+  nav a:nth-child(1) {
+    border-top: 1px black solid;
+  }
+  .first-section {
+    flex-direction: column;
+    margin: 0 10px;
+    padding: 20px 0;
+    /* this border-top being removed from action-container is mildly infuriating */
+    border-top: 1px solid black;
+  }
+  .action-container {
+    border: none;
+  }
+  .content-first {
+    padding: 20px 0px;
+  }
+  /* Why does it want padding ALL OF A SUDDEN? */
+  .middle-img-wrapper {
+    margin: 0 10px;
+  }
+  .second-section {
+    flex-direction: column;
+    margin: 0 10px;
+    padding: 20px 0;
+  }
+  .content-second {
+    padding: 20px 0px;
+  }
+  address {
+    margin: 0 10px;
+    margin-bottom: 40px;
+  }
+}
