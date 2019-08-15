@@ -1,3 +1,303 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+body {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px 75px;
+}
+
+.nav-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  margin-right: 60px;
+  color: rgba(128, 128, 128, .7);
+  text-decoration: none;
+}
+
+.action-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 40px;
+  margin-bottom: 35px;
+}
+
+#action-container-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 96px;
+  margin-bottom: 15px;
+}
+
+button.action {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px 50px 10px 50px;
+  width: 84px;
+  box-sizing: content-box;
+}
+
+.first-section {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.middle-img {
+  width: 100%;
+}
+
+.second-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 35px 0px;
+  border-bottom: 1px solid black;
+}
+
+#footer {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 40px;
+}
+
+#copyright {
+  text-align: center;
+}
+
+/* services.html styling */
+
+.services-header-img {
+  margin-bottom: 40px;
+}
+
+#services-intro {
+  padding-bottom: 40px;
+  border-bottom: 1px solid black;
+}
+
+#services-content {
+  margin: 20px 0px 40px 0px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  border-bottom: 2px solid black;
+}
+
+.service-item {
+  background-color: lightgray;
+  max-width: 47%;
+  margin: 20px 0px;
+  border: 2px solid black;
+  padding: 20px;
+}
+
+.service-item p {
+  margin-bottom: 20px;
+}
+
+.service-item button {
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: content-box;
+  padding: 10px 40px;
+}
+
+/* is this correct? Aren't footers usually standardized throughout a webpage? */
+
+#services-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+#footer-container {
+  /* why doesn't flex automatically go to 100% of the height or why doesn't 100% work? */
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+}
+
+#footer-container ul li {
+  list-style-type: square;
+  list-style-position: inside;
+  margin: 15px 0px;
+}
+
+/* Vision HTML */
+
+#vision-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#vision-row .service-item {
+  display: inline;
+}
+
+#vision-row:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+.vision-img {
+  max-width: 400px;
+}
+
+/* Tablet */
+
+@media (max-width: 800px) {
+  body {
+    padding: 25px 25px;
+  }
+  .nav-container {
+    display: flex;
+    flex-flow: column;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-evenly;
+  }
+  nav a {
+    margin: 0;
+  }
+  h1 {
+    font-size: 64px;
+  }
+  .logo {
+    order: -1;
+    margin-bottom: 20px;
+  }
+  .action-container img {
+    display: none;
+  }
+  address {
+    margin-bottom: 40px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  body {
+    padding: 25px 0px;
+  }
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  nav a {
+    text-align: center;
+    padding: 15px 0px;
+    border-bottom: 1px black solid;
+  }
+  /* is this the correct way to do this? */
+  nav a:nth-child(1) {
+    border-top: 1px black solid;
+  }
+  .first-section {
+    flex-direction: column;
+    margin: 0 10px;
+    padding: 20px 0;
+    /* this border-top being removed from action-container is mildly infuriating */
+    border-top: 1px solid black;
+  }
+  .action-container {
+    border: none;
+  }
+  .content-first {
+    padding: 20px 0px;
+  }
+  /* Why does it want padding ALL OF A SUDDEN? */
+  .middle-img-wrapper {
+    margin: 0 10px;
+  }
+  .second-section {
+    flex-direction: column;
+    margin: 0 10px;
+    padding: 20px 0;
+  }
+  .content-second {
+    padding: 20px 0px;
+  }
+  address {
+    margin: 0 10px;
+    margin-bottom: 40px;
+  }
+}
